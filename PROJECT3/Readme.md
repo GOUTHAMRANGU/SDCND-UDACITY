@@ -41,4 +41,5 @@ The goals / steps of this project are the following:
 
 ## Augmentation
 step:1 visualizing the data set
+
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/sample.JPG)
