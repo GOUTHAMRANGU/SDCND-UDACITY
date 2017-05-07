@@ -74,3 +74,12 @@ step:7 Flipping image
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/flip.JPG)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+
+# MODEL
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/model.JPG)
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+# RESULT
+[![IMAGE ALT TEXT HERE](https://www.youtube.com/watch?v=-XnEOL9RJ2o)]
