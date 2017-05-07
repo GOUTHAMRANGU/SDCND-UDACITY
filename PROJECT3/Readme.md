@@ -21,6 +21,17 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
+File structure:
+
+I have already included a model.json file in the folder with the model that gave the best performance. 
+
+* drive.py: File that loads the neural network model to be tested on the simulator. To be run as, python drive.py model.json
+* model.py: File that reads training data and trains the neural network. python model.py. Note, this scripts prints out model files in the format $model _ i.json$ for each training iteration $i$, and the model with lowest mean square error is saved as $model _ best.json$ after the models were trained, I checked the model that gives the best performance around the track, and saved that model as $model.json$
+* driving_log.csv: File containing driving data (steering, throttle and speed) along with the path to image files.
+* /IMG: Folder containing images from center, left and right cameras of the car. These path to these images are included in driving_log.csv file, and are read during training.
+* Readme: This file containing details of model training.
+
+I had models that showed very low validation score, but poor transfer, and others that had higher validation scores and showed better performance. So I decided to instead check driving performance on track 1 as validation. I discarded models that did not complete 1 full lap. My validation test was driving performance on track 1 in naive conditions, and I tested it by running the model on different track and resolutions/image sizes of track 1.
 
 ### Python code for this project is broken to parts as listed below
 1. Data acquisition and visualization from storage space 
@@ -38,6 +49,10 @@ The goals / steps of this project are the following:
 4. Creating an object that keeps track of weights at the end of each epoch and training the network.
 5. Choosing the right model weights by testing it on track1.
 6. Finally testing the choosen model to work on a generalised track that is Track2.
+
+I trained the model using the keras generator with batch size of 256 for 5 epochs. In each epoch, I generated 5120 images. I started with pr_threshold, the chance of dropping data with small angles as 1, and reduced the probability by dividing it by the iteration number after each epoch. The entire training took about 5 minutes. However, it too more than 20 hours to arrive at the right architecture and training parameters.
+
+ADAM OPTIMISER is used, and the I use dropout at five locations along the model to prevent the model from overfitting on the data.
 
 ## Augmentation
 step:1 Visualizing the data set
@@ -79,6 +94,7 @@ step:7 Flipping image
 # MODEL
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/model.JPG)
 
+The network consists of 9 layers, including a normalization layer, 5 convolutional layers and 3 fully connected layers. The input image is split into YUV planes and passed to the network. The first layer of the network performs image normalization. The normalizer is hard-coded using lambda function and is not adjusted in the learning process. Performing normalization in the network allows the normalization scheme to be altered with the network architecture and to be accelerated via GPU processing. The convolutional layers were designed to perform feature extraction and were chosen empirically through a series of experiments that varied layer configurations. I used strided convolutions in the first three convolutional layers with a 2×2 stride and a 5×5 kernel and a non-strided convolution with a 3×3 kernel size in the last two convolutional layers. I followed the five convolutional layers with three fully connected layers leading to an output control value which is the inverse turning radius. The fully connected layers are designed to function as a controller for steering, but we note that by training the system end-to-end, it is not possible to make a clean break between which parts of the network function primarily as feature extractor and which serve as controller. source (nvidia end-to-end driving model)
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 # RESULT
