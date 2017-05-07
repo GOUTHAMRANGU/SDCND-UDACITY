@@ -40,11 +40,30 @@ The goals / steps of this project are the following:
 6. Finally testing the choosen model to work on a generalised track that is Track2.
 
 ## Augmentation
-step:1 visualizing the data set
+step:1 Visualizing the data set
 
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/sample.JPG)
 
-step:2 applying clahe
+step:2 Applying clahe
 
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/clahe.JPG)
 
+step:3 Cropping and rescaling the image
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/crop_reshape_image.JPG)
+
+step:4 Randomly applying shadows
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/shadow.JPG)
+
+step:5 Applying gamma correction
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/gamm_diff.JPG)
+
+step:6 Shearing the image
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/shear.JPG)
+
+step: Flipping image
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/flip.JPG)
