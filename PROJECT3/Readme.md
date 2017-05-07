@@ -43,3 +43,8 @@ The goals / steps of this project are the following:
 step:1 visualizing the data set
 
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/sample.JPG)
+
+step:2 applying clahe
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/clahe.JPG)
+
