@@ -1,12 +1,18 @@
-#**Behavioral Cloning** 
+## LEARNING HUMAN DRIVING BEHAVIOUR USING DEEP NEURAL NETWORKS AND IMPROVISING WITH DATA AUGMENTATION AND FILTERING
 
-##Writeup Template
 
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
----
+#### The main Objective of this project is to build an network that can analyse human driving pattern from a simple track and mimic the same in generalised situations. The idea was to get training data from track1, which is simple to drive, augment it with various types of filtering and image processing techniques to create a datgaset with high affinity to generalize and feed it to a neural network with steering angles as the labels for each image captured during recording. This is one of the best projects that i have made till date.
 
-**Behavioral Cloning Project**
+##### My point about self driving cars is that there is a high probability that a car can drive with only cameras mounted on it for real-time perception using probabilistic modelling, deep-neural networks, and lots of training.
+
+#### In this project the network doesnot consider or remember the previous output that is the steering angle, but by using RNNs we can build a model with greater accuracy to drive on a lane but not at the center of the road as they do have memory.
+
+
+
+I used keyboard and mouse as my main means of movement. 
+
+One thing I was quite sure of, while doing this project is that validating the network is not a necessary task as the validation sets with comparibly higher loss were sometimes able to perform well than the others. This leads me to test all the models generated to test. The decision criteria was, if the model was not able to complete atleast one full lap in track1 with out any jerks or running away from tracks that model is considered to be part of result models set. 
 
 The goals / steps of this project are the following:
 * Use the simulator to collect data of good driving behavior
