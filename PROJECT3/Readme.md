@@ -94,7 +94,9 @@ step:7 Flipping image
 # MODEL
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT3/images/model.JPG)
 
+
 The network consists of 9 layers, including a normalization layer, 5 convolutional layers and 3 fully connected layers. The input image is split into YUV planes and passed to the network. The first layer of the network performs image normalization. The normalizer is hard-coded using lambda function and is not adjusted in the learning process. Performing normalization in the network allows the normalization scheme to be altered with the network architecture and to be accelerated via GPU processing. The convolutional layers were designed to perform feature extraction and were chosen empirically through a series of experiments that varied layer configurations. I used strided convolutions in the first three convolutional layers with a 2×2 stride and a 5×5 kernel and a non-strided convolution with a 3×3 kernel size in the last two convolutional layers. I followed the five convolutional layers with three fully connected layers leading to an output control value which is the inverse turning radius. The fully connected layers are designed to function as a controller for steering, but we note that by training the system end-to-end, it is not possible to make a clean break between which parts of the network function primarily as feature extractor and which serve as controller. source (nvidia end-to-end driving model)
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 # RESULT
