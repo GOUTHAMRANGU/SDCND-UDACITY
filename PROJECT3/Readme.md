@@ -82,4 +82,9 @@ step:7 Flipping image
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 # RESULT
-[![IMAGE ALT TEXT HERE](https://www.youtube.com/watch?v=-XnEOL9RJ2o)]
+The results can be viewed on youtube by following the links given below
+[Testing the model on track one. The model performed quite well on this track without going off from the center of the track not atleast once. But the actual intention was to test the model on track 2](https://www.youtube.com/watch?v=-XnEOL9RJ2o)
+
+[Testing model on track two with best graphics and some pre-processing techinques removed, they are shearing and gamma correction. The model tried to perform quite well but got bumped into a side post as there was an overlapping of two tracks in 2d camera view ](https://www.youtube.com/watch?v=tytpl-51GBI)
+
+[This is the final outcome of the model on track two with all possible pre-processing techniques applied on data collected from track one. The model did really well after using shearing and gamma correction. This project can be considered as one of the best projects I have done so far but also the wierdest one. Wierd because of the validation doesnot actually reflect the test performance.](https://www.youtube.com/watch?v=dTX2HpVYWNo)
