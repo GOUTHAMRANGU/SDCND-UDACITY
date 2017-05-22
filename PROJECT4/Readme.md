@@ -28,18 +28,23 @@ The above methodologies work only in the conditions when the lanes are visible t
 
 [//]: # (Image References)
 
-[image1]: ./examples/undistort_output.png "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
-[image3]: ./examples/binary_combo_example.jpg "Binary Example"
-[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
-[video1]: ./project_video.mp4 "Video"
+[image1]: ./output_images/cam_caliberation.JPG
+[image2]: ./output_images/undist.JPG
+[image3]: ./output_images/perspective.JPG
+[image4]: ./output_images/yello_filter.JPG
+[image5]: ./output_images/white_filter.JPG
+[image6]: ./output_images/combined.JPG
+[image7]: ./output_images/chooser.JPG
+[image8]: ./output_images/test_on_all.JPG
+[image9]: ./output_images/test_final.JPG
+[image10]: ./output_images/architecture.JPG
+[video1]: (https://youtu.be/RLADQ1ScPZk)
+[video2]: (https://youtu.be/kAPKyNAQ1QI)
 
 
 
 The preliminary task in self driving cars is to detect the lanes.
-step 1: Distortion correction
+### Step 1: Distortion correction
 The code for this step is contained in camera_caliberation.py file.
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image. Thus, objp is just a replicated array of coordinates, and objpoints will be appended with a copy of it every time I successfully detect all chessboard corners in a test image. imgpoints will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.
@@ -47,7 +52,23 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the cv2.calibrateCamera() function. I applied this distortion correction to the test image using the cv2.undistort() function and obtained this result:
 
 ![alt text][image1]
+![alt text][image2]
+![alt text][image7]
 
-step 2: Pipeline 
-![alt text][architecture]
-examples step by step
+### Step 2:  Pipeline 
+architecture:
+![alt text][image10]
+
+### Step 3:
+step by step testing of pipeline on a image.
+![alt text][image3]
+![alt text][image4]
+![alt text][image5]
+![alt text][image6]
+![alt text][image8]
+![alt text][image9]
+### Step 4:
+Output of pipoeline on given videos
+[result on simple video](https://youtu.be/RLADQ1ScPZk)
+[result on challenge 1](https://youtu.be/kAPKyNAQ1QI)
+[result on chalenge 2]()
