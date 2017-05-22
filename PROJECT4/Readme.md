@@ -1,4 +1,4 @@
-## ---MARKING LANE LINES AND DETERMINING RADIUS OF CURVATURE OF ROAD---
+## -MARKING LANE LINES AND DETERMINING RADIUS OF CURVATURE OF ROAD-
 #### INTRODUCTION:
 Lane detection and radius of curvature determination are very much important for any high level algorithm to predict the required steering angle and accelaration in sel-driven cars. So, algorithms developed to identify lane lines and curvature along with the position of the vehicle in the lane should be fast and accurate enough to be observed in real-time. In this project I try to present a novel idea based on advanced computer vision techniques that stand still in most of the conditions. The important aspects that any algorithm should look into while solving for this problem are shadows and sudden changes in sun light intensitties. So, we convert our image space from RGB to HSV or HSL and create thresholds on saturation values for Region of interest.
 
