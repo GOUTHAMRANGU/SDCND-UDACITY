@@ -28,9 +28,9 @@ The above methodologies work only in the conditions when the lanes are visible t
 
 [//]: # (Image References)
 
-[image1]: ./output_images/cam_caliberation.JPG
-[image2]: ./output_images/undist.JPG
-[image3]: ./output_images/perspective.JPG
+[image1]: output_images/cam_caliberation.JPG
+[image2]: output_images/undist.JPG
+[image3]: output_images/perspective.JPG
 [image4]: ./output_images/yello_filter.JPG
 [image5]: ./output_images/white_filter.JPG
 [image6]: ./output_images/combined.JPG
