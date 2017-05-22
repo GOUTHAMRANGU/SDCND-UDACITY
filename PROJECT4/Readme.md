@@ -45,8 +45,8 @@ I then used the output objpoints and imgpoints to compute the camera calibration
 
 
 ### Step 2:  Pipeline 
-architecture:
-![alt text][https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/architecture.JPG]
+architecture: The following flow method is used for processing the images. 
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/architecture.JPG)
 
 ### Step 3:
 step by step testing of pipeline on a image.
@@ -54,10 +54,30 @@ step by step testing of pipeline on a image.
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/yellow_filter.JPG)
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/combined.JPG)
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/test_on_all.JPG)
-![alt text][https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/test_final.JPG]
+We implement different lane calculations for the first frame and subsequent frames. In the first frame, we compute the lanes using computer vision methods, however, in the later frames, we skip these steps. Instead, we place windows of 50 pixel width centered on the lanes computed in the previous frame, and search within these windows. This significanly reduced the computation time, for our algorithm. We were able to achieve 10 Frames/s lane estimation rate.
+
+The next step is to compute lanes for the first image. To do so, we take the lane mask from the previous step, and take only the bottom half of the image. We next use scipy to compute the locations of the peaks corresponding to the left and right lanes.
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/hista.JPG)
+
+We then place a window of size 50 pixels centered at these peaks, and search for peaks in the bottom 8th of the image. Next we move up to the next 1/8th of the image and center windows at the peaks detected in the bottom 1/8th of the image. We repeat this process 8 times to cover the entire image. This is illustrated in the figure below.
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/hist.JPG)
+
+After computing the lanes, we draw them back on the original undistorted image as follows.
+
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/test_final.JPG)
 
 ### Step 4:
-Output of pipoeline on given videos
+If the current frame is not the first frame, we follow the same steps as part 2 to get the lane masks, however, we introduced additional steps to ensure any error due to incorrectly detected lanes is removed. Lane correction are introduced as,
+
+Outlier removal 1: If the change in coefficient is above 0.008, the lanes are computed as (coeffs = 0.5*coeff~prev+ 0.5 coeff\).. This number was obtained empirically.
+Outlier removal 2: If any lane was found with less than 6 pixels, we use the previous line fit coefficients as the coefficients for the current one.
+Smoothing: We smooth the value of the current lane using a first order filter response, as \(coeffs = 0.6*coeff~prev+ 0.4 coeff\).
+Finally , we use the coefficients of polynomial fit to compute curvatures of the lane, and relative location of the car in the lane.
+### Step 5:
+Output of pipoeline on given videos:
+
 [result on simple video](https://youtu.be/RLADQ1ScPZk)
 [result on challenge 1](https://youtu.be/kAPKyNAQ1QI)
 
