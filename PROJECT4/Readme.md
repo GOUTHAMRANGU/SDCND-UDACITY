@@ -46,18 +46,18 @@ I then used the output objpoints and imgpoints to compute the camera calibration
 
 ### Step 2:  Pipeline 
 architecture:
-![alt text][image10]
+![alt text][https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/architecture.JPG]
 
 ### Step 3:
 step by step testing of pipeline on a image.
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
-![alt text][image6]
-![alt text][image8]
-![alt text][image9]
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/white_filter.JPG)
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/yellow_filter.JPG)
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/combined.JPG)
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/test_on_all.JPG)
+![alt text][https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/test_final.JPG]
+
 ### Step 4:
 Output of pipoeline on given videos
 [result on simple video](https://youtu.be/RLADQ1ScPZk)
 [result on challenge 1](https://youtu.be/kAPKyNAQ1QI)
-[result on chalenge 2]()
+
