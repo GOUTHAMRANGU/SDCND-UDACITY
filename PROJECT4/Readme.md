@@ -39,11 +39,14 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the cv2.calibrateCamera() function. I applied this distortion correction to the test image using the cv2.undistort() function and obtained this result:
 
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/cam_caliberation.JPG)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/undist.JPG)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/chooser.JPG)
+The amount image to be considered in to the region of perspection was obatined by making large number of attempts as shown above
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/perspective.JPG)
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Step 2:  Pipeline 
 architecture: The following flow method is used for processing the images. 
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/architecture.JPG)
@@ -51,8 +54,14 @@ architecture: The following flow method is used for processing the images.
 ### Step 3:
 step by step testing of pipeline on a image.
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/white_filter.JPG)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/yellow_filter.JPG)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/combined.JPG)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/test_on_all.JPG)
 We implement different lane calculations for the first frame and subsequent frames. In the first frame, we compute the lanes using computer vision methods, however, in the later frames, we skip these steps. Instead, we place windows of 50 pixel width centered on the lanes computed in the previous frame, and search within these windows. This significanly reduced the computation time, for our algorithm. We were able to achieve 10 Frames/s lane estimation rate.
 
