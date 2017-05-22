@@ -26,20 +26,7 @@ The above methodologies work only in the conditions when the lanes are visible t
 
 
 
-[//]: # (Image References)
 
-[image1]: output_images/cam_caliberation.JPG
-[image2]: output_images/undist.JPG
-[image3]: output_images/perspective.JPG
-[image4]: ./output_images/yello_filter.JPG
-[image5]: ./output_images/white_filter.JPG
-[image6]: ./output_images/combined.JPG
-[image7]: ./output_images/chooser.JPG
-[image8]: ./output_images/test_on_all.JPG
-[image9]: ./output_images/test_final.JPG
-[image10]: ./output_images/architecture.JPG
-[video1]: (https://youtu.be/RLADQ1ScPZk)
-[video2]: (https://youtu.be/kAPKyNAQ1QI)
 
 
 
@@ -51,7 +38,7 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the cv2.calibrateCamera() function. I applied this distortion correction to the test image using the cv2.undistort() function and obtained this result:
 
-![alt text][https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output_images/cam_caliberation.JPG]
+![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output_images/caliberation.JPG)
 ![alt text][image2]
 ![alt text][image7]
 
