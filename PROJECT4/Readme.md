@@ -43,12 +43,15 @@ I then used the output objpoints and imgpoints to compute the camera calibration
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/undist.JPG)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/chooser.JPG)
-The amount image to be considered in to the region of perspection was obatined by making large number of attempts as shown above
+
+The portion ofimage to be considered in to the region of perspection was obatined by making large number of attempts as shown above
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/perspective.JPG)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Step 2:  Pipeline 
+
 architecture: The following flow method is used for processing the images. 
+
 ![alt text](https://github.com/GOUTHAMRANGU/SDCND-UDACITY/blob/master/PROJECT4/output/architecture.JPG)
 
 ### Step 3:
