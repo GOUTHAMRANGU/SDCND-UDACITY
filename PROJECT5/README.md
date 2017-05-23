@@ -94,8 +94,6 @@ As we can see on examples above, the classifier successfully finds cars on the t
 
 ### Implemented ideas:
 
-- Images were preprocessed by undistortion process from the [Advanced Lane Line](https://github.com/NikolasEnt/Advanced-Lane-Lines) finding project
-
 - To increase the classifier accuracy, feature extraction parameters were tuned. The data was augmented by flipped images.
 
 - To reduce number of false positives a heatmap with a threshold approach was implemented in the same to the suggested in the lectures way. For video the heatmap is accumulated by two frames which reduces number of outliers false positives.
