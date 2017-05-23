@@ -13,7 +13,7 @@ This Project is the fifth task of the Udacity Self-Driving Car Nanodegree progra
 - `test_images` - a directory with test images
 - `camera_cal` - a directory with camera calibration images 
 - `project_video_proc.mp4` - the result video
-- `project_video.mp4` - the original raw video from [Udacity](https://github.com/udacity/CarND-Vehicle-Detection)
+- `project_video.mp4` - the original raw video from Udacity
 
 ## Classifier
 
