@@ -8,16 +8,16 @@ This repository contains project files and lecture notes for Udacity's Self-Driv
 
 
 #### 1. Computer Vision
-- `computer-vision-notes-and-labs`: Notes on Computer Vision
 - Project 1: Finding Lane Lines (Intro to Computer Vision)
+- Project 4: Advance Lane Lines (Advanced Computer Vision)
 
 #### 2. Deep Learning
-- `deep-learning-notes-and-labs`: Notes on Deep Learning, Tensorflow and Keras
 - Project 2: Traffic Sign Classifier (Deep Learning)
 - Assignments :
       -1) miniflow 
       -2) LeNet-5
-
+- Project 3: Behaviour Cloning (Superb Project)
+- Project 5: Detecting Cars on Road (Computer Vision + Deep learning)
 
 
 
