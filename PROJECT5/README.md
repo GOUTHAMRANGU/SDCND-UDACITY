@@ -3,9 +3,8 @@
 
 This Project is the fifth task of the Udacity Self-Driving Car Nanodegree program. The main goal of the project is to  a software pipeline to identify vehicles in a video from a front-facing camera on a car.
 
-![Title .gif animation](readme_img/title.gif)
 
-**Result:** [video]https://youtu.be/oWSB9hcUpzA)
+**Result:** [video](https://youtu.be/oWSB9hcUpzA)
 
 ## Content of this repo
 
