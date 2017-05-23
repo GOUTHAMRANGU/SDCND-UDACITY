@@ -1,18 +1,18 @@
 # Vehicle-Detection-and-Tracking
 ### Udacity Self-Driving Car Engineer Nanodegree. Project: Vehicle Detection and Tracking
 
-This Project is the fifth task of the Udacity Self-Driving Car Nanodegree program. The main goal of the project is to  a software pipeline to identify vehicles in a video from a front-facing camera on a car. Additionally, an [Advanced Lane Line](https://github.com/NikolasEnt/Advanced-Lane-Lines) finding algorithm was added from the fourth task of the Nanodegree program.
+This Project is the fifth task of the Udacity Self-Driving Car Nanodegree program. The main goal of the project is to  a software pipeline to identify vehicles in a video from a front-facing camera on a car.
 
 ![Title .gif animation](readme_img/title.gif)
 
-**Result:** [video](https://youtu.be/waYJjmkRZfw)
+**Result:** [video]https://youtu.be/oWSB9hcUpzA)
 
 ## Content of this repo
 
 - `VehicheDetect.ipynb` - Jupyter notebook with code for the project
-- `laneline.py` - python program for lane line detection from the [project 4](https://github.com/NikolasEnt/Advanced-Lane-Lines).
+- `laneline.py` - python program for lane line detection.
 - `test_images` - a directory with test images
-- `camera_cal` - a directory with camera calibration images from the [project 4](https://github.com/NikolasEnt/Advanced-Lane-Lines).
+- `camera_cal` - a directory with camera calibration images 
 - `project_video_proc.mp4` - the result video
 - `project_video.mp4` - the original raw video from [Udacity](https://github.com/udacity/CarND-Vehicle-Detection)
 
@@ -134,7 +134,9 @@ The final result of an image with cars boundaries and lane detection.
 
 ## Results and discussion
 
-The pipeline is able to correctly lable cars areas on a video frames. The final video is [here](https://github.com/NikolasEnt/Vehicle-Detection-and-Tracking/blob/master/project_video_proc.mp4). The [Advanced Lane Line](https://github.com/NikolasEnt/Advanced-Lane-Lines) finding algorithm was added for the lane marking.
+The pipeline is able to correctly lable cars areas on a video frames. The final video is [here](https://youtu.be/oWSB9hcUpzA). 
+
+- cars on the other side of the road are not considered to be a major concern, because we felt that that would not of much help, as any self driving car wants to drive on towards its goal. 
 
 - Of course, the algorithm may fail in case of difficult light conditions, which could be partly resolved by the classifier improvement.
 
