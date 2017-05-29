@@ -93,3 +93,14 @@ Output of pipoeline on given videos:
 [result on simple video](https://youtu.be/RLADQ1ScPZk)
 [result on challenge 1](https://youtu.be/kAPKyNAQ1QI)
 
+# WHAT CAN BE IMPROVED:
+The pipeline could be improved by reducting the assumptions to a minimum. Some of the current assumptions are:
+1. A fixed perspective matrix. We could improve this by automatically determining the perspective transform.
+2. A flat surface. This is somewhat related to the previous point. We could improve the algorithm by making it work with any angle.
+3. The lines are well defined at the bottom of the image, which could be incorrect in some cases.
+
+# WHAT CAN MAKE THE CURRENT PIPELINE FAIL:
+1. It does not behave well when the lines do not span a signification portion of the image or if one line is missing (like in the harder challenge video).
+2. Varying lighting or weather conditions (rain, snow, night) or different lane colors (in construction zones, lane colours could be orange for example).
+3. Lanes that disappear for a long period of time or do not start at the bottom of the image.
+4. The pipeline could fail in the presence of traffic or pedestrians ahead. It could fail in ascents or descents and can also fail during lane switching.
