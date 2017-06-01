@@ -28,7 +28,7 @@ I have already included a model.json file in the folder with the model that gave
 * drive.py: File that loads the neural network model to be tested on the simulator. To be run as, python drive.py model.json
 * model.py: File that reads training data and trains the neural network. python model.py. Note, this scripts prints out model files in the format $model _ i.json$ for each training iteration $i$, and the model with lowest mean square error is saved as $model _ best.json$ after the models were trained, I checked the model that gives the best performance around the track, and saved that model as $model.json$
 * driving_log.csv: File containing driving data (steering, throttle and speed) along with the path to image files.
-* /IMG: Folder containing images from center, left and right cameras of the car. These path to these images are included in driving_log.csv file, and are read during training.
+* /images: Folder containing images from center, left and right cameras of the car. These path to these images are included in driving_log.csv file, and are read during training.
 * Readme: This file containing details of model training.
 
 I had models that showed very low validation score, but poor transfer, and others that had higher validation scores and showed better performance. So I decided to instead check driving performance on track 1 as validation. I discarded models that did not complete 1 full lap. My validation test was driving performance on track 1 in naive conditions, and I tested it by running the model on different track and resolutions/image sizes of track 1.
